@@ -1,0 +1,43 @@
+
+.header-section{
+    background-color:#FCA5A5;
+    height:10vh;
+    padding-top:20px;
+    text-align:center;
+
+}
+
+.input-con{
+    height:100px;
+    display:block;
+    width:80vw;
+    margin-left:150px;
+    margin-top:50px;
+    text-align:center;
+}
+
+.trans-btn{
+    height:50px;
+    font-size: 30px;
+    margin-top:20px;
+    margin-left:150px;
+    background-color:#FCA5A5;
+    border-radius:5px;
+    border-width:0px
+
+}
+p{
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.output-con{
+    border-style: solid;
+    border-color:#FCA5A5;
+    margin-left: 150px;
+    margin-top:20px;
+    border-width:1px;
+    height:100px;
+    width:80vw;
+    padding:30px
+}
