@@ -39,5 +39,15 @@ p{
     border-width:1px;
     height:100px;
     width:80vw;
-    padding:30px
+    padding:30px;
+    color:black
+}
+
+.footer{
+    min-height:95px;
+    max-height:100vh;
+    text-align:center;
+    background-color:#FCA5A5;
+    padding:30px;
+    margin-top:50px
 }

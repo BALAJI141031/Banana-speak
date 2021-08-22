@@ -6,30 +6,28 @@ const outputEl=document.getElementById('outputel')
 
 const url='https://api.funtranslations.com/translate/minion.json'
 
+function errorHandle(error){
+    console.log('error occured')
 
-
-
-
-
-
-function getDataFromServer(){
-    
-    let inputValue=inputEl.value
-    //console.log(inputValue)
-    const updatedUrl=url+'?'+'text='+inputValue
-    //console.log(updatedUrl)
-
-    fetch(updatedUrl)
-    .then(function(response){
-        return response.json()
-    }).then(function(parsedData){
-        
-        outputEl.value='okkkkkk'
-    })
-
+    outputEl.innerText='error occured'+error
+    alert('something went wrong please try after sometime')
 
 }
 
+function getData(){
+    const enterInput=inputEl.value
+    updatedUrl=url+'?'+'text='+enterInput
+    console.log(updatedUrl)
 
+    fetch(updatedUrl).then(function(response){
+        return response.json()
+    }).then(function(changedData){
+        const transText=changedData.contents.translated
+        outputEl.innerText=transText
+    }).catch(errorHandle)
 
-btnEl.addEventListener('click',getDataFromServer)
+   
+
+}
+
+btnEl.addEventListener('click',getData)
